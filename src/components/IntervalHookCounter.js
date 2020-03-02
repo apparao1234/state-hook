@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function IntervalHookCounter() {
   const [count, setCount] = useState(0);
   const tick = () => {
-    setCount(count + 1);
+    setCount(prevCount => prevCount + 1);
   };
   //added proper dependency count
   useEffect(() => {
@@ -11,7 +11,7 @@ function IntervalHookCounter() {
     return () => {
       clearInterval(interval);
     };
-  }, [count]);
+  }, []);
 
   return <div>{count}</div>;
 }
