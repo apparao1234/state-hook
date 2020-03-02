@@ -14,6 +14,11 @@ function HookMouse() {
   useEffect(() => {
     console.log("useEffect called");
     window.addEventListener("mousemove", logMousePosition);
+    //  The return which returns arrow function should handle the code of cleanup which
+    //will be called after functional component unmount
+    return () => {
+      window.removeEventListener("mousemove", logMousePosition);
+    };
   }, []);
   return (
     <div>
