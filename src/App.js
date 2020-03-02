@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import HookCounterThree from "./components/HookCounterThree";
+import UseEffectHookCounter from "./components/UseEffectHookCounter";
 
 function App() {
   return (
     <div className='App'>
-      <HookCounterThree />
+      <UseEffectHookCounter />
     </div>
   );
 }
