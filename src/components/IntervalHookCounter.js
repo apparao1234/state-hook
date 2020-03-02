@@ -5,13 +5,13 @@ function IntervalHookCounter() {
   const tick = () => {
     setCount(count + 1);
   };
-
+  //added proper dependency count
   useEffect(() => {
     const interval = setInterval(tick, 1000);
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [count]);
 
   return <div>{count}</div>;
 }
