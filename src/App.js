@@ -1,12 +1,20 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import DataFetching from "./components/DataFetching";
+import ComponentC from "./components/ComponentC";
+
+//the context is exported to use in other component for Cosumer
+export const FirstnameContext = React.createContext();
+export const SurNameContext = React.createContext();
 
 function App() {
   return (
     <div className='App'>
-      <DataFetching />
+      <FirstnameContext.Provider value={"Karunya"}>
+        <SurNameContext.Provider value={"G"}>
+          <ComponentC />
+        </SurNameContext.Provider>
+      </FirstnameContext.Provider>
     </div>
   );
 }
