@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import ComponentC from "./components/ComponentC";
 
-//the context is exported to use in other component for Cosumer
+//the context is exported to use in other component
+//where consumer configured
 export const FirstnameContext = React.createContext();
 export const SurNameContext = React.createContext();
 

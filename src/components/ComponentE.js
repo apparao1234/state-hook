@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import ComponentF from "./ComponentF";
+import { FirstnameContext, SurNameContext } from "../App";
 
 function ComponentE() {
+  const fistName = useContext(FirstnameContext);
+  const surName = useContext(SurNameContext);
   return (
     <div>
-      <ComponentF />
+      {fistName} and {surName}
     </div>
   );
 }
