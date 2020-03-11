@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import CounterReducerComplex from "./components/CounterReducerComplex";
+import CounterMultipleReducer from "./components/CounterMultipleReducer";
 
 function App() {
   return (
     <div className='App'>
-      <CounterReducerComplex></CounterReducerComplex>
+      <CounterMultipleReducer></CounterMultipleReducer>
     </div>
   );
 }
